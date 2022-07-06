@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+    - name: src
+      database: mkmart-dbt
+      schema: sourcedb
+      tables:
+        - name: customers
+        - name: nations
+        - name: regions
+        - name: parts
+        - name: suppliers
+        - name: lineitems
+        - name: orders
