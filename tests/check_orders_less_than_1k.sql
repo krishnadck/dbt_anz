@@ -1,3 +1,8 @@
+{{
+    config(
+        store_failures=true
+    )
+}}
 with orders as (
     select * from {{ ref('stg_orders') }}
 )

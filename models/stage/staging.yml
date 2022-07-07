@@ -11,10 +11,12 @@ models:
           - not_null
       - name: region_id
         tests:
-          - not_null
+          - custom_empty
           - relationships:
               to: ref('stg_regions')
               field: region_id
+              config:
+                store_failures: true
   - name: stg_regions
     columns:
       - name: region_id
@@ -36,4 +38,6 @@ models:
           - unique
           - not_null
       - name: total_price
-        description: '{{doc("price")}}'    
+        description: '{{doc("price")}}'
+
+     
